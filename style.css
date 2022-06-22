@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body,
+#main_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#new_task {
+  width: 800px;
+}
+input,
+button {
+  border: none;
+  background: none;
+  outline: none;
+}
