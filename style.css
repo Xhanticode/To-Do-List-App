@@ -3,19 +3,31 @@
   margin: 0;
   padding: 0;
 }
+#header_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 body,
 #main_content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 #new_task {
-  width: 800px;
 }
 input,
 button {
   border: none;
   background: none;
   outline: none;
+}
+li {
+  list-style: none;
+}
+h1 {
+  margin-bottom: 40px;
 }

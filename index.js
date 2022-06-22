@@ -2,7 +2,7 @@
 function newTask() {
   let li = document.createElement("li");
   let newTask = document.getElementById("newTask").value;
-  var task = document.createTextNode(newTask);
+  let task = document.createTextNode(newTask);
   li.appendChild(task);
   if (newTask === "") {
     alert("Insert task!");
@@ -11,16 +11,20 @@ function newTask() {
   }
   document.getElementById("newTask").value = "";
 
-  let span = document.createElement("SPAN");
-  let txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
+  const taskActions = document.createElement("div");
+  taskActions.classList.add("actions");
 
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function () {
-      var div = this.parentElement;
-      div.style.display = "none";
-    };
-  }
+  const taskEdit = document.createElement("button");
+  taskEdit.classList.add("edit");
+  taskEdit.innerText = "Edit";
+
+  const taskDelete = document.createElement("button");
+  taskDelete.classList.add("delete");
+  taskDelete.innerText = "Delete";
+
+  taskActions.appendChild(taskEdit);
+  taskActions.appendChild(taskDelete);
+
+  li.appendChild(taskActions);
+  document.getElementById("to_do_items").appendChild(li);
 }
