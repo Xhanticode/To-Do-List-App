@@ -1,7 +1,14 @@
 // Create a new list item when clicking on the "Add" button
+
+const toDo = [
+    {name: ${li}}
+]
+
+let items = JSON.parse(localStorage.getItem("items")) || [];
 function newTask() {
-  let li = document.createElement("input");
+  let li = document.createElement("label");
   li.classList.add("taskList");
+  li.type = "text";
   let newTask = document.getElementById("newTask").value;
   let task = document.createTextNode(newTask);
   li.appendChild(task);

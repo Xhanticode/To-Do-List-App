@@ -17,7 +17,11 @@ body,
   align-items: center;
 }
 
-#new_task {
+.edit,
+.delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 input,
 button {
@@ -35,6 +39,8 @@ h1 {
   display: flex;
   gap: 85px;
   width: 500px;
+  justify-content: space-between;
+  height: 50px;
 }
 body {
   background: linear-gradient(45deg, #e1f2fe, #0f0f0f);
@@ -83,7 +89,8 @@ main a:hover {
 main a:active {
   text-shadow: none;
 }
-main input {
+main input,
+label {
   background: transparent;
   width: 500px;
   padding: 1em;
@@ -120,7 +127,11 @@ main button {
   transition: all 0.2s ease-in-out;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
-
+.actions {
+  display: flex;
+  justify-content: space-between;
+  width: 130px;
+}
 ::-moz-placeholder {
   font-family: Montserrat, sans-serif;
   font-weight: 400;
