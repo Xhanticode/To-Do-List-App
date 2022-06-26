@@ -16,7 +16,10 @@ body,
   justify-content: center;
   align-items: center;
 }
-
+.each_task {
+  display: inline-flex;
+  width: 100%;
+}
 .edit,
 .delete {
   display: flex;
@@ -38,7 +41,7 @@ h1 {
 .taskList {
   display: flex;
   gap: 85px;
-  width: 500px;
+  width: 80%;
   justify-content: space-between;
   height: 50px;
 }
@@ -130,7 +133,7 @@ main button {
 .actions {
   display: flex;
   justify-content: space-between;
-  width: 130px;
+  width: 20%;
 }
 ::-moz-placeholder {
   font-family: Montserrat, sans-serif;
